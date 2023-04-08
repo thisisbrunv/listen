@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     /*
     VERIFICAR SE FOI GARANTIDO A PERMISSÃO AOS ARQUIVOS
 

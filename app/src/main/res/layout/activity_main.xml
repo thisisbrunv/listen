@@ -13,6 +13,8 @@
         android:layout_above="@id/layout_bottom"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_music"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <LinearLayout
@@ -34,13 +36,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="364dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="20dp"
-        tools:layout_editor_absoluteX="-51dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="34dp">
 
         <TextView
             android:id="@+id/textView_song"

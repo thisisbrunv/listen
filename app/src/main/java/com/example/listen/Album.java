@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Album {
-
     private String nome;
     private String capa;
     private String ano;
     private String genero;
+    private Artista artista;
     private List<Musica> musicas;
 
-    public Album(String nome, String capa, String ano, String genero) {
+    public Album(String nome, String capa, String ano, String genero, Artista artista, List<Musica> musicas) {
         this.nome = nome;
         this.capa = capa;
         this.ano = ano;
         this.genero = genero;
-        this.musicas = new ArrayList<>();
+        this.artista = artista;
+        this.musicas = musicas;
     }
 
     public String getNome() {
@@ -35,9 +36,11 @@ public class Album {
         return genero;
     }
 
+    public Artista getArtista() {
+        return artista;
+    }
+
     public List<Musica> getMusicas() {
         return musicas;
     }
-
-    public void addMusica(Musica musica) {
-        musicas.add(musica
+}

@@ -10,6 +10,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ListView listaMusicas;
+    private static final int PERMISSION_REQUEST_CODE = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,19 +24,9 @@ public class MainActivity extends AppCompatActivity {
         MusicaAdapter adapter = new MusicaAdapter(this, musicas);
         listaMusicas.setAdapter(adapter);
 
+
+
     }
 
-
-    /*
-    VERIFICAR SE FOI GARANTIDO A PERMISSÃO AOS ARQUIVOS
-
-    if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-            != PackageManager.PERMISSION_GRANTED) {
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                REQUEST_READ_EXTERNAL_STORAGE);
-    }
-
-     */
 
 }

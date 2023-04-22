@@ -1,70 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <com.realgear.multislidinguppanel.MultiSlidingUpPanelLayout
+        android:id="@+id/root_sliding_up_panel"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@id/layout_bottom"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_music"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/layout_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-
-        <SeekBar
-            android:id="@+id/seekBar"
+        <!-- 1 child view is required -->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/root_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:progressDrawable="@drawable/seekbar_progress"
-            android:thumb="@drawable/seekbar_thumb" />
+            android:layout_height="match_parent" />
 
-    </LinearLayout>
+    </com.realgear.multislidinguppanel.MultiSlidingUpPanelLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="364dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="34dp">
-
-        <TextView
-            android:id="@+id/textView_song"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Song Name"
-            android:textSize="18sp" />
-
-        <ImageButton
-            android:id="@+id/button_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_play" />
-
-        <ImageButton
-            android:id="@+id/button_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_next" />
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

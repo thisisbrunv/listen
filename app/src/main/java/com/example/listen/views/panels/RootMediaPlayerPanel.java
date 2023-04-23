@@ -20,7 +20,9 @@ public class RootMediaPlayerPanel extends BasePanelView{
 
     @Override
     public void onCreateView() {
-
+        this.setPanelState(MultiSlidingUpPanelLayout.COLLAPSED);
+        this.setSlideDirection(MultiSlidingUpPanelLayout.SLIDE_VERTICAL);
+        this.setPeakHeight(getResources().getDimensionPixelSize(R.dimen.mediaplayerbar_height));
     }
 
     @Override
